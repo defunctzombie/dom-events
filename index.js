@@ -26,7 +26,7 @@ if (!document.removeEventListener) {
     }
 }
 
-if (!document.fireEvent) {
+if (!document.dispatchEvent) {
     emit = function(element, name, opt) {
         var ev = synth(name, opt);
         return element.fireEvent('on' + ev.type, ev);
