@@ -4,10 +4,15 @@
   "description": "dom event binding and triggering",
   "main": "index.js",
   "dependencies": {
-    "synthetic-dom-events": "0.1.0",
-    "tape": "0.2.2"
+    "synthetic-dom-events": "0.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "1.8.1",
+    "zuul": "0.0.6"
+  },
+  "scripts": {
+    "test": "zuul --ui tdd test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/shtylman/eve.git"
@@ -26,6 +31,7 @@
       "firefox/3.6..latest",
       "chrome/4.0..latest",
       "safari/5.1..latest"
-    ]
+    ],
+    "harness": "mocha-tdd"
   }
 }
