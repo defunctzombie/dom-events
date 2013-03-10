@@ -2,6 +2,8 @@
 
 DOM event binding and triggering
 
+[![browser support](http://ci.testling.com/shtylman/eve.png)](http://ci.testling.com/shtylman/eve)
+
 ## api
 
 ### eve.on(element, name, fn [, useCapture])
