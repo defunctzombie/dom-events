@@ -16,14 +16,14 @@ var emit = function(element, name, opt) {
 
 if (!document.addEventListener) {
     on = function(element, name, fn) {
-        return element.attachEvent('on', + name, fn);
-    }
+        return element.attachEvent('on' + name, fn);
+    };
 }
 
 if (!document.removeEventListener) {
     off = function(element, name, fn) {
         return element.detachEvent('on' + name, fn);
-    }
+    };
 }
 
 if (!document.dispatchEvent) {
