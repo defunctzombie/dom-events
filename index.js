@@ -26,10 +26,10 @@ if (!document.removeEventListener) {
     }
 }
 
-if (!document.dispatchEvent) {
+if (!document.fireEvent) {
     emit = function(element, name, opt) {
         var ev = synth(name, opt);
-        element.fireEvent('on' + ev.type, ev);
+        return element.fireEvent('on' + ev.type, ev);
     };
 }
 
