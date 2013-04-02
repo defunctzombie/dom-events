@@ -1,17 +1,17 @@
-# eve
+# dom-events
 
 DOM event binding and triggering
 
-[![browser support](http://ci.testling.com/shtylman/eve.png)](http://ci.testling.com/shtylman/eve)
+[![browser support](http://ci.testling.com/shtylman/dom-events.png)](http://ci.testling.com/shtylman/dom-events)
 
 ## api
 
-### eve.on(element, name, fn [, useCapture])
+### .on(element, name, fn [, useCapture])
 
 Bind `fn` to be called when `name` is triggered on `element`.
 
 ```js
-var eve = require('eve');
+var eve = require('dom-events');
 
 var div = document.createElement('div');
 eve.on(div, 'click', function(ev) {
@@ -19,12 +19,12 @@ eve.on(div, 'click', function(ev) {
 });
 ```
 
-### eve.off(element, name, fn [, useCapture])
+### .off(element, name, fn [, useCapture])
 
 Remove `fn` from being called when `name` is triggered on `element`
 
 ```js
-var eve = require('eve');
+var eve = require('dom-events');
 
 var fn = function(ev) {
     console.log(ev);
@@ -38,12 +38,12 @@ eve.on(div, 'click', fn);
 eve.off(div, 'click', fn);
 ```
 
-### eve.emit(element, name [, opts])
+### .emit(element, name [, opts])
 
 Force emit `name` on `element`.
 
 ```js
-var eve = require('eve');
+var eve = require('dom-events');
 
 var div = document.createElement('div');
 eve.on(div, 'click', function(ev) {

@@ -1,5 +1,5 @@
 {
-  "name": "eve",
+  "name": "dom-events",
   "version": "0.0.0",
   "description": "dom event binding and triggering",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/shtylman/eve.git"
+    "url": "git://github.com/shtylman/dom-events.git"
   },
   "keywords": [
     "event",
