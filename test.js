@@ -32,3 +32,14 @@ test('off', function(done) {
     eve.on(div, 'click', fn);
     eve.emit(div, 'click');
 });
+
+test('once', function(done) {
+    var div = create('div');
+    eve.once(div, 'click', function(ev) {
+        assert.ok(ev);
+        done();
+    });
+
+    eve.emit(div, 'click');
+    eve.emit(div, 'click');
+});
