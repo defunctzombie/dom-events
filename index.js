@@ -11,8 +11,8 @@ var off = function(element, name, fn, capture) {
 
 var once = function (element, name, fn, capture) {
     function tmp (ev) {
-      off(element, name, tmp, capture);
-      fn(ev);
+        off(element, name, tmp, capture);
+        fn(ev);
     }
     on(element, name, tmp, capture);
 };
