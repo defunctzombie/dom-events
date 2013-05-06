@@ -9,6 +9,14 @@ var off = function(element, name, fn, capture) {
     return element.removeEventListener(name, fn, capture || false);
 };
 
+var once = function (element, name, fn, capture) {
+    function tmp (ev) {
+      off(element, name, tmp, capture);
+      fn(ev);
+    }
+    on(element, name, tmp, capture);
+};
+
 var emit = function(element, name, opt) {
     var ev = synth(name, opt);
     element.dispatchEvent(ev);
@@ -36,5 +44,6 @@ if (!document.dispatchEvent) {
 module.exports = {
     on: on,
     off: off,
+    once: once,
     emit: emit
 };
