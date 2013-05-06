@@ -38,6 +38,10 @@ eve.on(div, 'click', fn);
 eve.off(div, 'click', fn);
 ```
 
+### .once(element, name, fn [, useCapture])
+
+Calls `fn` the first time the event happens and unsubcribes immediately.
+
 ### .emit(element, name [, opts])
 
 Force emit `name` on `element`.
