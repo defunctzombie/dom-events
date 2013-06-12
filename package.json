@@ -4,11 +4,11 @@
   "description": "dom event binding and triggering",
   "main": "index.js",
   "dependencies": {
-    "synthetic-dom-events": "0.1.0"
+    "synthetic-dom-events": "0.1.1"
   },
   "devDependencies": {
     "mocha": "1.8.1",
-    "zuul": "0.0.6"
+    "zuul": "0.0.7"
   },
   "scripts": {
     "test": "zuul --ui tdd test.js"
