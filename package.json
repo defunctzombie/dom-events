@@ -4,7 +4,8 @@
   "description": "dom event binding and triggering",
   "main": "index.js",
   "dependencies": {
-    "synthetic-dom-events": "0.1.1"
+    "synthetic-dom-events": "0.1.1",
+    "fix-ev": "~0.1.0"
   },
   "devDependencies": {
     "mocha": "1.8.1",
