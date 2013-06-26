@@ -1,6 +1,6 @@
 
 var synth = require('synthetic-dom-events');
-var fix = require('fix-ev');
+var fix_ev = require('fix-ev');
 
 var on = function(element, name, fn, capture) {
     return element.addEventListener(name, fn, capture || false);
@@ -25,13 +25,13 @@ var emit = function(element, name, opt) {
 
 if (!document.addEventListener) {
     on = function(element, name, fn) {
-        return element.attachEvent('on' + name, fix(fn));
+        return element.attachEvent('on' + name, fix_ev(fn));
     };
 }
 
 if (!document.removeEventListener) {
     off = function(element, name, fn) {
-        return element.detachEvent('on' + name, fix(fn));
+        return element.detachEvent('on' + name, fix_ev(fn));
     };
 }
 
