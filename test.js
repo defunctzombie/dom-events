@@ -1,6 +1,8 @@
 var assert = require('assert');
 var eve = require('./');
 
+suite('dom-events');
+
 // need to append to body for IE testing
 var create = function(what) {
     var el = document.createElement(what);

@@ -7,11 +7,10 @@
     "synthetic-dom-events": "0.1.1"
   },
   "devDependencies": {
-    "mocha": "1.8.1",
-    "zuul": "0.0.7"
+    "zuul": "~1.0.3"
   },
   "scripts": {
-    "test": "zuul --ui tdd test.js"
+    "test": "zuul test.js"
   },
   "repository": {
     "type": "git",
@@ -23,15 +22,5 @@
     "events"
   ],
   "author": "Roman Shtylman <shtylman@gmail.com>",
-  "license": "MIT",
-  "testling": {
-    "files": "test.js",
-    "browsers": [
-      "ie/6..latest",
-      "firefox/3.6..latest",
-      "chrome/4.0..latest",
-      "safari/5.1..latest"
-    ],
-    "harness": "mocha-tdd"
-  }
+  "license": "MIT"
 }

@@ -1,8 +1,8 @@
 # dom-events
 
-DOM event binding and triggering
+[![Build Status](https://travis-ci.org/defunctzombie/dom-events.png?branch=master)](https://travis-ci.org/defunctzombie/dom-events)
 
-[![browser support](http://ci.testling.com/shtylman/dom-events.png)](http://ci.testling.com/shtylman/dom-events)
+DOM event binding and triggering
 
 ## api
 
