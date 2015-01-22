@@ -1,5 +1,6 @@
 
 var synth = require('synthetic-dom-events');
+var fireNative = require('fire-native-event');
 
 var on = function(element, name, fn, capture) {
     return element.addEventListener(name, fn, capture || false);
@@ -19,7 +20,7 @@ var once = function (element, name, fn, capture) {
 
 var emit = function(element, name, opt) {
     var ev = synth(name, opt);
-    element.dispatchEvent(ev);
+    fireNative(element, ev);
 };
 
 if (!document.addEventListener) {
@@ -31,13 +32,6 @@ if (!document.addEventListener) {
 if (!document.removeEventListener) {
     off = function(element, name, fn) {
         return element.detachEvent('on' + name, fn);
-    };
-}
-
-if (!document.dispatchEvent) {
-    emit = function(element, name, opt) {
-        var ev = synth(name, opt);
-        return element.fireEvent('on' + ev.type, ev);
     };
 }
 
